@@ -1,0 +1,5 @@
+name: HardcorePlus
+version: 1.0
+description: Harding the survival mode
+author: Henry Barreto
+main: dev.henrybarreto.hardcoreplus.Plugin

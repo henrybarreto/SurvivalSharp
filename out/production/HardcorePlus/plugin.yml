@@ -1,0 +1,6 @@
+name: HardcorePlus
+version: 1.0
+description: Esse plugin permite que você se coloque em chamas.
+author: Henry Barreto
+
+main: dev.henrybarreto.hardcoreplus.Plugin
