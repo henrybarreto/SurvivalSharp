@@ -11,9 +11,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
 
-
 public class Events implements Listener {
-    public static final int MULT = 10;
+    public static final int MULT = 5;
     @EventHandler
     public void EntityDamageEvent(EntityDamageEvent event) {
         if (event.getEntity() instanceof Player) {

@@ -1,6 +1,5 @@
 name: HardcorePlus
 version: 1.0
-description: Esse plugin permite que você se coloque em chamas.
+description: Harding the survival mode
 author: Henry Barreto
-
 main: dev.henrybarreto.hardcoreplus.Plugin
