@@ -12,7 +12,7 @@ import org.bukkit.potion.PotionEffectType;
 import java.util.List;
 
 public class Events implements Listener {
-    public static final int MULT = 5;
+    public static final int MULT = 4;
     @EventHandler
     public void EntityDamageEvent(EntityDamageEvent event) {
         if (event.getEntity() instanceof Player) {
@@ -32,10 +32,10 @@ public class Events implements Listener {
             Mob mob = (Mob) event.getDamager();
 
             if(mob instanceof Zombie) {
-                Helper.addEffect(player, PotionEffectType.WITHER, MULT);
+                Helper.addEffect(player, PotionEffectType.WEAKNESS, MULT);
             }
-            if(mob instanceof Skeleton) {
-                Helper.addEffect(player, PotionEffectType.SLOW, MULT);
+            if(mob instanceof Arrow) {
+                Helper.addEffect(player, PotionEffectType.CONFUSION, MULT);
             }
             if(mob instanceof Spider) {
                 Helper.addEffect(player, PotionEffectType.POISON, MULT);
