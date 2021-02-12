@@ -1,5 +1,6 @@
 package dev.henrybarreto.hardcoreplus;
 
+import dev.henrybarreto.hardcoreplus.mobs.chain.*;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -7,11 +8,10 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
 
-public class Events implements Listener {
+public class HardcorePlusEvents implements Listener {
     public static final double MULTIPLIER = 4.5;
     @EventHandler
     public void EntityDamageEvent(EntityDamageEvent event) {
@@ -31,18 +31,14 @@ public class Events implements Listener {
             Player player = (Player) event.getEntity();
             Mob mob = (Mob) event.getDamager();
 
-            if(mob instanceof Zombie) {
-                Helper.addEffect(player, PotionEffectType.WEAKNESS, MULTIPLIER);
-            }
-            if(mob instanceof Arrow) {
-                Helper.addEffect(player, PotionEffectType.CONFUSION, MULTIPLIER);
-            }
-            if(mob instanceof Spider) {
-                Helper.addEffect(player, PotionEffectType.POISON, MULTIPLIER);
-            }
-            if(mob instanceof Phantom) {
-                Helper.addEffect(player, PotionEffectType.BLINDNESS, MULTIPLIER);
-            }
+            Chain zombieChain  = new ZombieChain(player);
+            Chain spiderChain  = new SpiderChain(player);
+            Chain phantomChain = new PhantomChain(player);
+
+            zombieChain.nextMob(spiderChain);
+            spiderChain.nextMob(phantomChain);
+
+            zombieChain.handleMob(mob);
         }
     }
     @EventHandler
