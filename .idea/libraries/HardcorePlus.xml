@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HardcorePlus">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/HardcorePlus_jar/HardcorePlus.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
