@@ -21,7 +21,7 @@ public class HardcorePlusEvents implements Listener {
             );
         } else {
             event.setDamage(
-                    event.getDamage() / MULTIPLIER
+                    event.getDamage() / (MULTIPLIER/2)
             );
         }
     }
