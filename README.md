@@ -1,7 +1,7 @@
 # HardcorePlus
 HardcorePlus is a simple bukkit/ spigot plugin to do the survival harder
 
-![HardcorePlus logo](https://imgur.com/uBYR4So)
+![HardcorePlus logo](https://i.imgur.com/uBYR4So.png)
 
 ## How does it work?
 It is trying to harder the survival changing some default features of the game, like:
