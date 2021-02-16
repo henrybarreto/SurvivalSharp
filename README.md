@@ -1,18 +1,10 @@
 # HardcorePlus
-HardcorePlus is a simple bukkit/ spigot plugin to do the survival harder
 
 ![HardcorePlus logo](https://i.imgur.com/uBYR4So.png?2)
 
-## Features
-It is trying to harder the survival changing some default features of the game, like:
-- Increasing the damage from all sources
-- Decreasing the damage that mobs taken
-- Decreasing the amount of XP gained
-- Giving some mobs negative effects
-- Deleting dropped items from the player's death
-and more are coming...
-  
 ## Info
+HardcorePlus is a simple bukkit/ spigot plugin to do the survival harder
+
 **Tested Minecraft versions:** 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16
 
 Actually, the plugin are under tests and changes will come in, so suggestion to improvements are so welcome, than feel 
@@ -22,7 +14,16 @@ free to open an issue with yours.
 
 [Download the Plugin](https://github.com/henrybarreto/HardcorePlus/raw/master/out/artifacts/HardcorePlus_jar/HardcorePlus.jar)
 
-### Would you like to help the project?
+## Features
+It is trying to harder the survival changing some default features of the game, like:
+- Increasing the damage from all sources
+- Decreasing the damage that mobs taken
+- Decreasing the amount of XP gained
+- Giving some mobs negative effects
+- Deleting dropped items from the player's death
+and more are coming...
+
+## Donate
 
 If you have liked the plugin, consider help their development contributing with either code or financial support
 
