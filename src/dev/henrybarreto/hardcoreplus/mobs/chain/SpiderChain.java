@@ -1,5 +1,6 @@
 package dev.henrybarreto.hardcoreplus.mobs.chain;
 
+import dev.henrybarreto.hardcoreplus.mobs.effects.Effect;
 import dev.henrybarreto.hardcoreplus.mobs.effects.SpiderEffect;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
@@ -14,7 +15,7 @@ public class SpiderChain extends Chain {
     @Override
     public boolean handleMob(Mob mob) {
         if(mob instanceof Spider) {
-            SpiderEffect spiderEffect = new SpiderEffect();
+            Effect spiderEffect = new SpiderEffect();
             spiderEffect.addEffect(this.player);
             return true;
         } else {

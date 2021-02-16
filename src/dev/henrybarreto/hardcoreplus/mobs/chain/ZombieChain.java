@@ -1,5 +1,6 @@
 package dev.henrybarreto.hardcoreplus.mobs.chain;
 
+import dev.henrybarreto.hardcoreplus.mobs.effects.Effect;
 import dev.henrybarreto.hardcoreplus.mobs.effects.ZombieEffect;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
@@ -14,7 +15,7 @@ public class ZombieChain extends Chain {
     @Override
     public boolean handleMob(Mob mob) {
         if(mob instanceof Zombie) {
-            ZombieEffect zombieEffect = new ZombieEffect();
+            Effect zombieEffect = new ZombieEffect();
             zombieEffect.addEffect(this.player);
             return true;
         } else {

@@ -1,5 +1,6 @@
 package dev.henrybarreto.hardcoreplus.mobs.chain;
 
+import dev.henrybarreto.hardcoreplus.mobs.effects.Effect;
 import dev.henrybarreto.hardcoreplus.mobs.effects.PhantomEffect;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Phantom;
@@ -14,7 +15,7 @@ public class PhantomChain extends Chain {
     @Override
     public boolean handleMob(Mob mob) {
         if(mob instanceof Phantom) {
-            PhantomEffect phantomEffect = new PhantomEffect();
+            Effect phantomEffect = new PhantomEffect();
             phantomEffect.addEffect(this.player);
             return true;
         } else {

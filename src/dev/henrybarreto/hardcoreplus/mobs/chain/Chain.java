@@ -5,10 +5,10 @@ import org.bukkit.entity.Player;
 
 public abstract class Chain {
     public Player player;
+    private Chain next;
     public Chain(Player player) {
         this.player = player;
     }
-    private Chain next;
     public Chain nextMob(Chain next) {
         this.next = next;
         return next;
