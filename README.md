@@ -15,7 +15,7 @@ and more are coming...
 Actually, the plugin are under tests and changes will come in, so suggestion to improvements are so welcome, than feel 
 free to open an issue with yours.
 
-*I recommend to the server difficult to be in hard to get the better experience*
+*I recommend the server difficult to be setted in hard to get the better experience*
 
 ### Would you like to help the project?
 
