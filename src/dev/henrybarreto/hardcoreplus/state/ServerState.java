@@ -6,10 +6,10 @@ public class ServerState {
     public ServerState() {
     }
 
-    public static int getDeaths() {
+    public int getDeaths() {
         return deaths;
     }
-    public static void setDeaths(int deathsNumber) {
+    public void setDeaths(int deathsNumber) {
         deaths = deathsNumber;
    }
 }

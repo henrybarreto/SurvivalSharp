@@ -55,8 +55,9 @@ public class HardcorePlusEvents implements Listener {
     @EventHandler
     public void PlayerDeathEvent(PlayerDeathEvent event) {
         List<ItemStack> drops = event.getDrops();
-        ServerState.setDeaths(
-                ServerState.getDeaths() + 1
+        ServerState serverState = new ServerState();
+        serverState.setDeaths(
+                serverState.getDeaths() + 1
         );
         drops.clear();
     }
