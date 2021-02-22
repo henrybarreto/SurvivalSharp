@@ -4,3 +4,11 @@ description: Harding the survival mode
 author: Henry Barreto
 website: https://github.com/henrybarreto/HardcorePlus
 main: dev.henrybarreto.hardcoreplus.HardcorePlus
+commands:
+  hdp:
+    description: HardcorePlus commands
+    usage: "
+    Usage /<command> [action] [state]\n
+      action:[count]\n
+      state:[death]
+    "
