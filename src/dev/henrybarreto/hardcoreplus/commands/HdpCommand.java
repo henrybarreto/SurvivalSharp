@@ -7,7 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HdpCommand implements CommandExecutor {
     @Override
@@ -29,10 +28,6 @@ public class HdpCommand implements CommandExecutor {
             player.sendMessage(Integer.toString(serverState.getDeaths()) + " deaths in the server");
             return true;
         }));
-        listOfCommands.add(commands.check("count", "eggs", (arg01, arg02) -> {
-            player.sendMessage("You have 100 egs now!");
-            return true;
-        }));
 
         return listOfCommands.stream().reduce(false, (subtotal, result) -> {
             if(result) {
@@ -43,6 +38,10 @@ public class HdpCommand implements CommandExecutor {
         });
     }
 }
+
+/*
+    Fix it
+ */
 
 interface CommandAction {
     boolean action(String arg1, String arg2);

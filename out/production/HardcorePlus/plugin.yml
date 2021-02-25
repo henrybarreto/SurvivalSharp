@@ -7,8 +7,3 @@ main: dev.henrybarreto.hardcoreplus.HardcorePlus
 commands:
   hdp:
     description: HardcorePlus commands
-    usage: "
-    Usage /<command> [action] [state]\n
-      action:[count]\n
-      state:[death]
-    "
