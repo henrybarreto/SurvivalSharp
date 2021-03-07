@@ -1,8 +1,6 @@
 package dev.henrybarreto.hardcoreplus;
 
-import dev.henrybarreto.hardcoreplus.commands.HdpCommand;
 import org.bukkit.Server;
-import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,10 +13,8 @@ public class HardcorePlus extends JavaPlugin {
         Logger logger= getLogger();
         Server server = getServer();
         PluginManager manager = server.getPluginManager();
-        PluginCommand commandHdp = getCommand("hdp");
 
         manager.registerEvents(new HardcorePlusEvents(), this);
-        commandHdp.setExecutor(new HdpCommand());
 
         logger.info("HardcorePlus is enabled!");
     }

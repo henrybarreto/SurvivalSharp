@@ -1,7 +1,6 @@
 package dev.henrybarreto.hardcoreplus;
 
 import dev.henrybarreto.hardcoreplus.mobs.chain.*;
-import dev.henrybarreto.hardcoreplus.state.ServerState;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -63,10 +62,6 @@ public class HardcorePlusEvents implements Listener {
     @EventHandler
     public void PlayerDeathEvent(PlayerDeathEvent event) {
         List<ItemStack> drops = event.getDrops();
-        ServerState serverState = new ServerState();
-        serverState.setDeaths(
-                serverState.getDeaths() + 1
-        );
         drops.clear();
     }
 }
