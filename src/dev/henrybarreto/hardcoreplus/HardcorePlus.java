@@ -13,6 +13,7 @@ public class HardcorePlus extends JavaPlugin {
         Logger logger= getLogger();
         Server server = getServer();
         PluginManager manager = server.getPluginManager();
+
         manager.registerEvents(new HardcorePlusEvents(), this);
 
         logger.info("HardcorePlus is enabled!");
