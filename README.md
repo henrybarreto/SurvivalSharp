@@ -7,8 +7,7 @@ HardcorePlus is a simple bukkit/ spigot plugin to do the survival harder
 
 **Tested Minecraft versions:** 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16
 
-Actually, the plugin are under tests and changes will come in, so suggestion to improvements are so welcome, than feel 
-free to open an issue with yours.
+Actually, the plugin are under tests and changes will come in, so suggestion to improvements are so welcome. Feel free to open an issue with yours.
 
 *I recommend the server difficult to be set in hard to get the better experience*
 
