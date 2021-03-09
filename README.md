@@ -19,6 +19,7 @@ It is trying to harder the survival changing some default features of the game, 
     - Increasing the damage from all sources
     - Decreasing the damage that mobs taken
     - Decreasing the amount of XP gained
+    - Decreasing the food efficiency
     - Giving some mobs negative effects
     - Deleting dropped items from the player's death
 and more are coming...
