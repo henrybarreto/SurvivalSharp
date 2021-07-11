@@ -10,6 +10,8 @@ plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
 }
+group = "dev.henrybarreto"
+version = "0.3-alpha"
 
 repositories {
     // Use Maven Central for resolving dependencies.
