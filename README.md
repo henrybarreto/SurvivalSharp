@@ -9,8 +9,6 @@ HardcorePlus is a simple bukkit/ spigot plugin to tough the survival mode.
 
 Actually, the plugin are under tests and changes will come in, so suggestion to improvements are so welcome.
 
-*I recommend the server difficult to be set in hard to get the better experience*
-
 ## Features
 
 - Increasing the damage from all sources

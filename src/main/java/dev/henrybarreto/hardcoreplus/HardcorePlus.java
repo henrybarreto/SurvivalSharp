@@ -1,5 +1,6 @@
 package dev.henrybarreto.hardcoreplus;
 
+import org.bukkit.Difficulty;
 import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -12,8 +13,11 @@ public class HardcorePlus extends JavaPlugin {
         super.onEnable();
         Logger logger= getLogger();
         Server server = getServer();
-        PluginManager manager = server.getPluginManager();
 
+        server.getWorlds().forEach((world) -> world.setDifficulty(Difficulty.HARD));
+        logger.info("Setting the difficulty to HARD");
+
+        PluginManager manager = server.getPluginManager();
         manager.registerEvents(new HardcorePlusEvents(), this);
 
         logger.info("HardcorePlus is enabled!");
