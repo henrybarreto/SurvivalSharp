@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public abstract class Chain {
     public Player player;
-    private Chain next;
+    public Chain next;
     public Chain(Player player) {
         this.player = player;
     }

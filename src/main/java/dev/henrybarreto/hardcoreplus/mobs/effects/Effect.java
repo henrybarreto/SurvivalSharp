@@ -8,8 +8,6 @@ public abstract class Effect {
     protected PotionEffectType effect;
     protected int time = 200;
     protected int intensity = 1;
-    public Effect() {
-    }
     public void addEffect(Player player) {
         player.addPotionEffect(
                 new PotionEffect(this.effect, this.time, this.intensity));

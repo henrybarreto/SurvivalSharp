@@ -1,6 +1,7 @@
 package dev.henrybarreto.hardcoreplus;
 
 import dev.henrybarreto.hardcoreplus.mobs.chain.*;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,15 +16,17 @@ import java.util.List;
 
 public class HardcorePlusEvents implements Listener {
     public static final double MULTIPLIER_MOB_DAMAGE = 3;
-    public static final double MULTIPLIER_MOB_DMG_TAKEN = 2.5;
+    public static final double MULTIPLIER_MOB_DMG_TAKEN = 1.5;
     public static final int MULTIPLIER_XP_GAIN = 2;
     public static final int MULTIPLIER_FOOD_GAIN = 2;
 
     @EventHandler
     public void EntityDamageEvent(EntityDamageEvent event) {
         if (event.getEntity() instanceof Player) {
+            Player player = ((Player) event.getEntity()).getPlayer();
+            double armorPlayer = player.getAttribute(Attribute.GENERIC_ARMOR).getValue();
             event.setDamage(
-                    event.getDamage() * MULTIPLIER_MOB_DAMAGE
+                    (event.getDamage() - armorPlayer) * MULTIPLIER_MOB_DAMAGE
             );
         } else {
             event.setDamage(

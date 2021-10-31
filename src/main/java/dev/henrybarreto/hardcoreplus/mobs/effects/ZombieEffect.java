@@ -1,6 +1,5 @@
 package dev.henrybarreto.hardcoreplus.mobs.effects;
 
-import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
 
 public class ZombieEffect extends Effect {

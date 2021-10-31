@@ -1,10 +1,9 @@
 package dev.henrybarreto.hardcoreplus.mobs.chain;
 
-import dev.henrybarreto.hardcoreplus.mobs.effects.Effect;
-import dev.henrybarreto.hardcoreplus.mobs.effects.PhantomEffect;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Phantom;
 import org.bukkit.entity.Player;
+import dev.henrybarreto.hardcoreplus.mobs.effects.*;
 
 public class PhantomChain extends Chain {
 

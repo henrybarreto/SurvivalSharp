@@ -1,10 +1,9 @@
 package dev.henrybarreto.hardcoreplus.mobs.chain;
 
-import dev.henrybarreto.hardcoreplus.mobs.effects.Effect;
-import dev.henrybarreto.hardcoreplus.mobs.effects.SpiderEffect;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Spider;
+import dev.henrybarreto.hardcoreplus.mobs.effects.*;
 
 public class SpiderChain extends Chain {
 
