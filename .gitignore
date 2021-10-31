@@ -1,5 +1,5 @@
 # Ignore Intellij configuration directory
-.ideal/
+.idea/
 
 # Ignore Gradle project-specific cache directory
 .gradle
