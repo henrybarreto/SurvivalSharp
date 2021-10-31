@@ -1,7 +1,7 @@
 package dev.henrybarreto.hardcoreplus;
 
 import dev.henrybarreto.hardcoreplus.mobs.chain.*;
-import org.bukkit.attribute.Attribute;
+import org.bukkit.Sound;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -9,31 +9,30 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerExpChangeEvent;
-import org.bukkit.event.player.PlayerItemConsumeEvent;
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.event.player.PlayerJoinEvent;
 
-import java.util.List;
+import java.util.function.Function;
 
 public class HardcorePlusEvents implements Listener {
     public static final double MULTIPLIER_MOB_DAMAGE = 3;
     public static final double MULTIPLIER_MOB_DMG_TAKEN = 1.5;
     public static final int MULTIPLIER_XP_GAIN = 2;
-    public static final int MULTIPLIER_FOOD_GAIN = 2;
 
     @EventHandler
     public void EntityDamageEvent(EntityDamageEvent event) {
+        Function<Double, Double> calculateDamageOnPlayer = (Double damage) -> damage * MULTIPLIER_MOB_DAMAGE;
+        Function<Double, Double> calculateDamageOnMob = (Double damage) -> damage / MULTIPLIER_MOB_DMG_TAKEN;
         if (event.getEntity() instanceof Player) {
-            Player player = ((Player) event.getEntity()).getPlayer();
-            double armorPlayer = player.getAttribute(Attribute.GENERIC_ARMOR).getValue();
             event.setDamage(
-                    (event.getDamage() - armorPlayer) * MULTIPLIER_MOB_DAMAGE
+                    calculateDamageOnPlayer.apply(event.getFinalDamage())
             );
         } else {
             event.setDamage(
-                    event.getDamage() / (MULTIPLIER_MOB_DMG_TAKEN)
+                    calculateDamageOnMob.apply(event.getFinalDamage())
             );
         }
     }
+
     @EventHandler
     public void EntityDamageByEntityEvent(EntityDamageByEntityEvent event) {
         if(event.getEntity() instanceof Player && event.getDamager() instanceof Mob) {
@@ -52,19 +51,25 @@ public class HardcorePlusEvents implements Listener {
     }
 
     @EventHandler
-    public void PlayerItemConsumeEvent(PlayerItemConsumeEvent event) {
-        event.getPlayer().setFoodLevel(event.getPlayer().getFoodLevel() - MULTIPLIER_FOOD_GAIN);
+    public void PlayerExpChangeEvent(PlayerExpChangeEvent event) {
+        Function<Integer, Integer> calculateXPGain = (Integer xp) -> xp / MULTIPLIER_XP_GAIN;
+        event.setAmount(
+                calculateXPGain.apply(event.getAmount())
+        );
     }
 
     @EventHandler
-    public void PlayerExpChangeEvent(PlayerExpChangeEvent event) {
-        event.setAmount(
-                event.getAmount() / MULTIPLIER_XP_GAIN
+    public void PlayerJoinEvent(PlayerJoinEvent event) {
+        event.getPlayer().getWorld().playSound(
+                event.getPlayer().getLocation(),
+                Sound.ENTITY_LIGHTNING_BOLT_THUNDER,
+                10,
+                1
         );
     }
+
     @EventHandler
     public void PlayerDeathEvent(PlayerDeathEvent event) {
-        List<ItemStack> drops = event.getDrops();
-        drops.clear();
+        event.getDrops().clear();
     }
 }
