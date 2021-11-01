@@ -42,9 +42,11 @@ public class SurvivalSharpEvents implements Listener {
             Chain zombieChain  = new ZombieChain(player);
             Chain spiderChain  = new SpiderChain(player);
             Chain phantomChain = new PhantomChain(player);
+            Chain silverfishChain = new SilverfishChain(player);
 
             zombieChain.nextMob(spiderChain);
             spiderChain.nextMob(phantomChain);
+            phantomChain.nextMob(silverfishChain);
 
             zombieChain.handleMob(mob);
         }
