@@ -1,4 +1,6 @@
-![HardcorePlus logo](SurvivalSharp.png)
+<p align="center">
+  <img src="https://github.com/henrybarreto/SurvivalSharp/raw/master/SurvivalSharp.png">
+</p>
 
 Survival# is a simple bukkit/spigot plugin to tough the survival mode for personal servers.
 
