@@ -14,8 +14,11 @@ public class HardcorePlus extends JavaPlugin {
         Logger logger= getLogger();
         Server server = getServer();
 
-        server.getWorlds().forEach((world) -> world.setDifficulty(Difficulty.HARD));
-        logger.info("Setting the difficulty to HARD");
+        server.getWorlds().forEach((world) -> {
+            world.setDifficulty(Difficulty.HARD);
+            // world.setHardcore(true);
+        });
+        logger.info("Difficulty set to Hard in all worlds");
 
         PluginManager manager = server.getPluginManager();
         manager.registerEvents(new HardcorePlusEvents(), this);
