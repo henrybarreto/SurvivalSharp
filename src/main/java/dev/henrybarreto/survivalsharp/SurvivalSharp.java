@@ -1,4 +1,4 @@
-package dev.henrybarreto.hardcoreplus;
+package dev.henrybarreto.survivalsharp;
 
 import org.bukkit.Difficulty;
 import org.bukkit.Server;
@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
-public class HardcorePlus extends JavaPlugin {
+public class SurvivalSharp extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
@@ -21,14 +21,14 @@ public class HardcorePlus extends JavaPlugin {
         logger.info("Difficulty set to Hard in all worlds");
 
         PluginManager manager = server.getPluginManager();
-        manager.registerEvents(new HardcorePlusEvents(), this);
+        manager.registerEvents(new SurvivalSharpEvents(), this);
 
-        logger.info("HardcorePlus is enabled!");
+        logger.info("SurvivalSharp is enabled!");
     }
 
     @Override
     public void onDisable() {
         getLogger()
-            .info("HardcorePlus is disabled!");
+            .info("SurvivalSharp is disabled!");
     }
 }

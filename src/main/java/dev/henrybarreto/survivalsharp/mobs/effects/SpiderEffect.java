@@ -1,4 +1,4 @@
-package dev.henrybarreto.hardcoreplus.mobs.effects;
+package dev.henrybarreto.survivalsharp.mobs.effects;
 
 import org.bukkit.potion.PotionEffectType;
 

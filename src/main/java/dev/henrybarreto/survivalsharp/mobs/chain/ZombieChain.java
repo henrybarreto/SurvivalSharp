@@ -1,9 +1,9 @@
-package dev.henrybarreto.hardcoreplus.mobs.chain;
+package dev.henrybarreto.survivalsharp.mobs.chain;
 
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
-import dev.henrybarreto.hardcoreplus.mobs.effects.*;
+import dev.henrybarreto.survivalsharp.mobs.effects.*;
 
 public class ZombieChain extends Chain {
 

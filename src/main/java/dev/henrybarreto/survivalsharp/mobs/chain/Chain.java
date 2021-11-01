@@ -1,4 +1,4 @@
-package dev.henrybarreto.hardcoreplus.mobs.chain;
+package dev.henrybarreto.survivalsharp.mobs.chain;
 
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;

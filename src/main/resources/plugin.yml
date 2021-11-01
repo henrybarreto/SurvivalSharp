@@ -1,6 +1,6 @@
-name: HardcorePlus
+name: SurvivalSharp
 version: 0.3-alpha
-description: Harding the survival mode
+description: Toughing the survival mode
 author: Henry Barreto
-website: https://github.com/henrybarreto/HardcorePlus
-main: dev.henrybarreto.hardcoreplus.HardcorePlus
+website: https://github.com/henrybarreto/SurvivalSharp
+main: dev.henrybarreto.survivalsharp.SurvivalSharp

@@ -1,6 +1,6 @@
-package dev.henrybarreto.hardcoreplus;
+package dev.henrybarreto.survivalsharp;
 
-import dev.henrybarreto.hardcoreplus.mobs.chain.*;
+import dev.henrybarreto.survivalsharp.mobs.chain.*;
 import org.bukkit.Sound;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.util.function.Function;
 
-public class HardcorePlusEvents implements Listener {
+public class SurvivalSharpEvents implements Listener {
     public static final double MULTIPLIER_MOB_DAMAGE = 3;
     public static final double MULTIPLIER_MOB_DMG_TAKEN = 1.5;
     public static final int MULTIPLIER_XP_GAIN = 2;
