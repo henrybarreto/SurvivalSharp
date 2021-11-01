@@ -14,8 +14,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import java.util.function.Function;
 
 public class SurvivalSharpEvents implements Listener {
-    public static final double MULTIPLIER_MOB_DAMAGE = 3;
-    public static final double MULTIPLIER_MOB_DMG_TAKEN = 1.5;
+    public static final double MULTIPLIER_MOB_DAMAGE = 4;
+    public static final double MULTIPLIER_MOB_DMG_TAKEN = 2;
     public static final int MULTIPLIER_XP_GAIN = 2;
 
     @EventHandler
