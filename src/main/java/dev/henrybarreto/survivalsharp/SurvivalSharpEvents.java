@@ -9,14 +9,28 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerExpChangeEvent;
+import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import java.util.HashMap;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class SurvivalSharpEvents implements Listener {
-    public static final double MULTIPLIER_MOB_DAMAGE = 4;
-    public static final double MULTIPLIER_MOB_DMG_TAKEN = 2;
-    public static final int MULTIPLIER_XP_GAIN = 2;
+    public HashMap<String, Integer> playerDeath;
+
+    public final double MULTIPLIER_MOB_DAMAGE = 4;
+    public final int MULTIPLIER_ITEM_DAMAGE = 6;
+    public final double MULTIPLIER_MOB_DMG_TAKEN = 2;
+    public final int MULTIPLIER_XP_GAIN = 2;
+
+    @EventHandler
+    public void PlayerItemDamageEvent(PlayerItemDamageEvent event) {
+        Function<Integer, Integer> calculateDamageItem = (Integer damage) -> damage * MULTIPLIER_ITEM_DAMAGE;
+        event.setDamage(
+            calculateDamageItem.apply(event.getDamage())
+        );
+    }
 
     @EventHandler
     public void EntityDamageEvent(EntityDamageEvent event) {
@@ -35,17 +49,17 @@ public class SurvivalSharpEvents implements Listener {
 
     @EventHandler
     public void EntityDamageByEntityEvent(EntityDamageByEntityEvent event) {
-        if(event.getEntity() instanceof Player && event.getDamager() instanceof Mob) {
-            Player player = (Player) event.getEntity();
-            Mob mob = (Mob) event.getDamager();
+        Function<Player, Boolean> isBlocking = (Player player) -> ((Player) event.getEntity()).isBlocking();
+        if(event.getEntity() instanceof Player player &&
+                !isBlocking.apply(player) &&
+                event.getDamager() instanceof Mob mob)
+        {
 
             Chain zombieChain  = new ZombieChain(player);
-            Chain spiderChain  = new SpiderChain(player);
             Chain phantomChain = new PhantomChain(player);
             Chain silverfishChain = new SilverfishChain(player);
 
-            zombieChain.nextMob(spiderChain);
-            spiderChain.nextMob(phantomChain);
+            zombieChain.nextMob(phantomChain);
             phantomChain.nextMob(silverfishChain);
 
             zombieChain.handleMob(mob);
@@ -68,10 +82,23 @@ public class SurvivalSharpEvents implements Listener {
                 10,
                 1
         );
+
     }
 
     @EventHandler
     public void PlayerDeathEvent(PlayerDeathEvent event) {
+        Consumer<Player> setDeath = (Player player) -> {
+            if(playerDeath.get(player.getName()) != null) {
+                playerDeath.put(
+                    player.getName(), 
+                    playerDeath.get(player.getName()) + 1
+                );
+            } else {
+                playerDeath.put(player.getName(), 1);
+            }
+        };
+
         event.getDrops().clear();
+        setDeath.accept(event.getEntity());
     }
 }

@@ -5,7 +5,6 @@ import dev.henrybarreto.survivalsharp.mobs.effects.SilverfishEffect;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Silverfish;
-import org.bukkit.entity.Zombie;
 
 public class SilverfishChain extends Chain {
 

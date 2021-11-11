@@ -15,10 +15,11 @@ When I and my friends' player Minecraft, we normally play inconsequentially, let
 ### Features
 
 - Increasing the damage from all sources
+- Increasing the damage taken by items 
 - Decreasing the damage that mobs taken
 - Decreasing the amount of XP gained
 - Giving some mobs negative effects
-- Deleting dropped items when the player's die
+- Deleting dropped items when player's die
 
 [Buy me a coffee](https://www.buymeacoffee.com/henrybarreto)
 
