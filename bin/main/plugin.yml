@@ -1,6 +1,0 @@
-name: SurvivalSharp
-version: 0.3.5
-description: Toughing the survival mode
-author: Henry Barreto
-website: https://github.com/henrybarreto/SurvivalSharp
-main: dev.henrybarreto.survivalsharp.SurvivalSharp
