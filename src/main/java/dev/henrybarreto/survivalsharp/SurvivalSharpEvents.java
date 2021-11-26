@@ -20,7 +20,7 @@ public class SurvivalSharpEvents implements Listener {
     public HashMap<String, Integer> playerDeath;
 
     public final double MULTIPLIER_MOB_DAMAGE = 4;
-    public final int MULTIPLIER_ITEM_DAMAGE = 5;
+    public final int MULTIPLIER_ITEM_DAMAGE = 4;
     public final double MULTIPLIER_MOB_DMG_TAKEN = 2;
     public final int MULTIPLIER_XP_GAIN = 2;
 

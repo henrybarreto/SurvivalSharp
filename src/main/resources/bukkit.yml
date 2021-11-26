@@ -1,0 +1,29 @@
+config-version: 8
+world-settings:
+  default:
+    growth:
+      cactus-modifier: 50
+      cane-modifier: 50
+      melon-modifier: 50
+      mushroom-modifier: 50
+      pumpkin-modifier: 50
+      sapling-modifier: 50
+      beetroot-modifier: 50
+      carrot-modifier: 50
+      potato-modifier: 50
+      wheat-modifier: 50
+      netherwart-modifier: 50
+      vine-modifier: 50
+      cocoa-modifier: 50
+      bamboo-modifier: 50
+      sweetberry-modifier: 50
+      kelp-modifier: 50
+    hunger:
+      jump-walk-exhaustion: 0.15
+      jump-sprint-exhaustion: 0.6
+      combat-exhaustion: 0.3
+      regen-exhaustion: 18.0
+      swim-multiplier: 0.15
+      sprint-multiplier: 0.3
+    entity-activation-range:
+      monsters: 48   

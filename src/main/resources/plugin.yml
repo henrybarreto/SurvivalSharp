@@ -1,6 +1,6 @@
 name: SurvivalSharp
-version: 0.3.6
-description: Toughing the survival mode
+version: 0.4.0
+description: Survival# is a simple bukkit/spigot plugin to tough the survival mode for personal servers
 author: Henry Barreto
 website: https://github.com/henrybarreto/SurvivalSharp
 main: dev.henrybarreto.survivalsharp.SurvivalSharp
